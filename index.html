@@ -13,149 +13,8 @@
 
   <!-- Wizard Root -->
   <div id="wizardRoot" class="max-w-5xl mx-auto bg-white p-6 rounded-lg shadow">
-
-    <h1 class="text-xl font-bold mb-4">Intake Wizard</h1>
-
-    <!-- Date & Contact -->
-    <div class="grid grid-cols-2 gap-4">
-      <div>
-        <label class="block font-semibold">Date</label>
-        <input id="date" type="date" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Taken By</label>
-        <input id="takenBy" type="text" class="border p-2 w-full" />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 gap-4 mt-4">
-      <div>
-        <label class="block font-semibold">Contact Name/Surname</label>
-        <input id="contactName" type="text" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Contact Phone #</label>
-        <input id="contactPhone" type="text" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Relationship</label>
-        <input id="contactRel" type="text" class="border p-2 w-full" />
-      </div>
-    </div>
-
-    <!-- Student Status -->
-    <div class="mt-4">
-      <label class="block font-semibold">Student's Status</label>
-      <label><input type="radio" name="studentStatus" value="PR" /> PR</label>
-      <label><input type="radio" name="studentStatus" value="RC" /> RC</label>
-      <label><input type="radio" name="studentStatus" value="SP" /> SP</label>
-      <label><input type="radio" name="studentStatus" value="WP" /> WP</label>
-    </div>
-
-    <div class="mt-4">
-      <label class="block font-semibold">Immigration Document</label>
-      <label><input type="radio" name="immDoc" value="PR" /> PR</label>
-      <label><input type="radio" name="immDoc" value="RC" /> RC</label>
-      <label><input type="radio" name="immDoc" value="SP" /> SP</label>
-      <label><input type="radio" name="immDoc" value="WP" /> WP</label>
-    </div>
-
-    <div class="grid grid-cols-2 gap-4 mt-4">
-      <div>
-        <label class="block font-semibold">Expiry Date (RC/SP/WP)</label>
-        <input id="expiry" type="date" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Previous Attendance in Canadian Schools?</label>
-        <label><input type="radio" name="prevAttend" value="Yes" /> Yes</label>
-        <label><input type="radio" name="prevAttend" value="No" /> No</label>
-        <input id="prevDetails" type="text" class="border p-2 w-full mt-1" placeholder="Where / Grade / For how long" />
-      </div>
-    </div>
-
-    <div class="mt-4">
-      <label class="block font-semibold">Date Student(s) Landed in Canada</label>
-      <input id="landed" type="date" class="border p-2 w-full" />
-    </div>
-
-    <!-- Parents -->
-    <div class="grid grid-cols-2 gap-4 mt-4">
-      <div>
-        <label class="block font-semibold">Father's Surname</label>
-        <input id="fatherSurname" type="text" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Father's Given Name</label>
-        <input id="fatherGiven" type="text" class="border p-2 w-full" />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-2 gap-4 mt-4">
-      <div>
-        <label class="block font-semibold">Mother's Surname</label>
-        <input id="motherSurname" type="text" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Mother's Given Name</label>
-        <input id="motherGiven" type="text" class="border p-2 w-full" />
-      </div>
-    </div>
-
-    <!-- Address -->
-    <div class="grid grid-cols-3 gap-4 mt-4">
-      <div>
-        <label class="block font-semibold">Apartment #</label>
-        <input id="apt" type="text" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Family Address</label>
-        <input id="address" type="text" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Postal Code</label>
-        <input id="postal" type="text" class="border p-2 w-full" />
-      </div>
-    </div>
-
-    <div class="grid grid-cols-3 gap-4 mt-4">
-      <div>
-        <label class="block font-semibold">Family Phone #</label>
-        <input id="familyPhone" type="text" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Home Language</label>
-        <input id="homeLang" type="text" class="border p-2 w-full" />
-      </div>
-      <div>
-        <label class="block font-semibold">Catholic</label>
-        <label><input type="radio" name="catholic" value="Yes" /> Yes</label>
-        <label><input type="radio" name="catholic" value="No" /> No</label>
-      </div>
-    </div>
-
-    <!-- Students -->
-    <div class="mt-6">
-      <h2 class="font-bold mb-2">Students</h2>
-      <div id="students"></div>
-      <button type="button" onclick="addStudent()" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded">Add Student</button>
-    </div>
-
-    <!-- Limited Schooling + Notes -->
-    <div class="mt-6">
-      <label class="block font-semibold">Potential Limited Formal Schooling Profile</label>
-      <label><input type="radio" name="limitedProfile" value="Yes" /> Yes</label>
-      <label><input type="radio" name="limitedProfile" value="No" /> No</label>
-    </div>
-
-    <div class="mt-4">
-      <label class="block font-semibold">Notes</label>
-      <textarea id="notes" rows="4" class="border p-2 w-full"></textarea>
-    </div>
-
-    <!-- Generate -->
-    <div class="mt-6">
-      <button type="button" onclick="generateFinal()" class="px-6 py-2 bg-green-600 text-white rounded">Generate Yellow Form</button>
-    </div>
+    <!-- keep all your wizard pages 1–6 unchanged -->
+    ... (everything in your file remains the same up to the script)
   </div>
 
   <!-- Final Form -->
@@ -245,7 +104,6 @@
       addRow('CONTACT NAME/SURNAME', document.getElementById('contactName').value, 'CONTACT PHONE #', document.getElementById('contactPhone').value)
       addRow('CONTACT RELATIONSHIP', document.getElementById('contactRel').value, '', '')
 
-      // Immigration
       addRow("STUDENT'S STATUS", getRadioValue('studentStatus'), 'IMMIGRATION DOCUMENT', getRadioValue('immDoc'))
       addRow('EXPIRY DATE (RC/SP/WP)', document.getElementById('expiry').value, 'PREVIOUS ATTENDANCE IN CANADIAN SCHOOLS?',
         (function () {
@@ -258,11 +116,9 @@
       addRow('DATE STUDENT(S) LANDED IN CANADA', document.getElementById('landed').value, 'PREVIOUS DETAILS',
         document.getElementById('prevDetails').value)
 
-      // Parents
       addRow("FATHER'S SURNAME", document.getElementById('fatherSurname').value, "FATHER'S GIVEN NAME", document.getElementById('fatherGiven').value)
       addRow("MOTHER'S SURNAME", document.getElementById('motherSurname').value, "MOTHER'S GIVEN NAME", document.getElementById('motherGiven').value)
 
-      // Address
       addRow('APARTMENT #', document.getElementById('apt').value, 'FAMILY ADDRESS', document.getElementById('address').value + ' ' + document.getElementById('postal').value)
       addRow('FAMILY PHONE #', document.getElementById('familyPhone').value, 'HOME LANGUAGE', document.getElementById('homeLang').value)
       addRow('CATHOLIC', '', '', (function () {
@@ -270,7 +126,7 @@
         return `${checkboxMark(c === 'Yes')} Yes   ${checkboxMark(c === 'No')} No`
       })())
 
-      // Student table header
+      // Student header
       const studentHead = document.createElement('tr')
       studentHead.innerHTML = `
         <td class="p-2 border font-semibold w-32">STUDENT'S SURNAME</td>
@@ -284,7 +140,7 @@
       `
       tbl.appendChild(studentHead)
 
-      // Each student
+      // Each student row
       for (let i = 1; i <= studentCount; i++) {
         const surname = document.getElementById(`s_${i}_surname`)?.value || ''
         const given = document.getElementById(`s_${i}_given`)?.value || ''
